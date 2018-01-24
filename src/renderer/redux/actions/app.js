@@ -28,7 +28,7 @@ const { download } = remote.require('electron-dl');
 const Fs = remote.require('fs');
 const { lbrySettings: config } = require('package.json');
 
-const CHECK_UPGRADE_INTERVAL = 10 * 60 * 1000;
+const CHECK_UPGRADE_INTERVAL = 60 * 1000;
 
 export function doOpenModal(modal, modalProps = {}) {
   return {

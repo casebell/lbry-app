@@ -22,6 +22,8 @@ const { autoUpdater } = remote.require('electron-updater');
 
 autoUpdater.logger = remote.require("electron-log");
 
+window.autoUpdater = autoUpdater;
+
 window.addEventListener('contextmenu', event => {
   contextMenu(remote.getCurrentWindow(), event.x, event.y, app.env === 'development');
   event.preventDefault();
